@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Blogging!</title>
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+  <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css"
+    media="screen" charset="utf-8">
+
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
+
+
+
+</head>
+
+<body class="loader">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+
+      <ul class="nav navbar-nav">
+        <li><a class='navbar-brand bigbrand' href="#" style="color: whitesmoke;">Goverment of Goa</a></li>
+        <li><a href="{% url 'testapp:get_name' %}" style="color: whitesmoke;">Alumini Registration</a></li>
+        <li><a href="{% url 'testapp:user_login' %}" style="color: whitesmoke;">Alumini Login</a></li>
+
+        <li><a href="{% url 'testapp:college_login' %}" style="color: whitesmoke;">Institution Login</a></li>
+        <li><a href="https://LinkedIn.com" style="color: whitesmoke;">LinkedIn</a></li>
+      </ul>
+
+    </div>
+    </div>
+    </div>
+    </div>
+  </nav>
+
+    Register Here?
+     
+      <div class="container">
+        <form method="POST">
+          <h1>Register Here!</h1>
+          <div class="form-group">
+
+            {% csrf_token %}
+            {{ form.as_p }}
+          </div>
+           
+
+          <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+      </div>
+
+
+
+
+  </div>
+  <style>
+    /* Full-width input fields */
+
+
+    /* Add a background color when the inputs get focus */
+    /*input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}*/
+
+    /* Set a style for all buttons */
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 40%;
+      opacity: 0.9;
+    }
+
+    button:hover {
+      opacity: 1;
+    }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      padding: 14px 50px;
+      background-color: #f44336;
+    }
+
+    /* Float cancel and signup buttons and add an equal width */
+    .cancelbtn,
+    .signupbtn {
+      float: left;
+      width: 30%;
+    }
+
+    /* Add padding to container elements */
+    .container {
+      padding: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: white;
+      padding-top: 50px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: white;
+      margin: 5% auto 15% auto;
+      /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* Style the horizontal ruler */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 35px;
+      top: 15px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #f1f1f1;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #f44336;
+      cursor: pointer;
+    }
+
+    /* Clear floats */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* Change styles for cancel button and signup button on extra small screens */
+    /*@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }*/
+  </style>
+</body>
+
+</html>

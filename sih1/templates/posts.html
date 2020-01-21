@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        {% for c in college %}
+        <h1>Welcome {{ c.college_name }}</h1>
+    <p>goood to have u back</p>
+    {% endfor %}
+    <h1>list of students</h1>
+    <div class="container">
+{% for coll in acc %}
+<form action="{% url 'testapp:user_valid' %}" method="POST">
+    {% csrf_token %} 
+    <table>
+    <tr>
+      <td><button>{{ coll.username }}</button></td>
+      <td><button>{{ coll.email }}</button></td>
+      <td><button>{{ coll.college }}</button></td>
+      <td><button>{{ coll.field }}</button></td>
+      <input type="text" name="accept">
+      <input type="submit" value="submit"> 
+      <br>
+    </tr>
+    </table>
+</form>
+
+{% endfor %}
+</div>
+</body>
+
+
+</html>
